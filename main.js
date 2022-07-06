@@ -66,6 +66,26 @@ function fishBtnClicked() {
       numPufferSpan.innerHTML = numPuffer;
       resultImg.src = "img/Pufferfish.png";
     }
+  } else if (character === "villager") {
+    // Villager: Cod 25%, Salmon 25%, Tropical 25%, Puffer 25%
+    let randNum = Math.random();
+    if (randNum <= 0.25){
+      numCod++;
+      numCodSpan.innerHTML = numCod;
+      resultImg.src = "img/Raw-Cod.png";
+    } else if (randNum <= 0.50) {
+      numSalmon++;
+      numSalmonSpan.innerHTML = numSalmon;
+      resultImg.src = "img/Raw-Salmon.png";
+    } else if (randNum <= 0.75) {
+      numTropical++;
+      numTropicalSpan.innerHTML = numTropical;
+      resultImg.src = "img/Tropical-Fish.png";
+    } else {
+      numPuffer++;
+      numPufferSpan.innerHTML = numPuffer;
+      resultImg.src = "img/Pufferfish.png";
+    }
   }
 }
 
