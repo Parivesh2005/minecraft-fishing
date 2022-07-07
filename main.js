@@ -25,66 +25,64 @@ function fishBtnClicked() {
   // Check Selected Character
   let character = charSelect.value;
 
+  // Functions for +1 fish
+  function catchFishCod(){
+    numCod++;
+    numCodSpan.innerHTML = numCod;
+    resultImg.src = "img/Raw-Cod.png";
+  }
+  function catchFishSalmon(){
+    numSalmon++;
+    numSalmonSpan.innerHTML = numSalmon;
+    resultImg.src = "img/Raw-Salmon.png";
+  }
+  function catchFishTropical(){
+    numTropical++;
+    numTropicalSpan.innerHTML = numTropical;
+    resultImg.src = "img/Tropical-Fish.png";
+  }
+  function catchFishPuffer(){
+    numPuffer++;
+    numPufferSpan.innerHTML = numPuffer;
+    resultImg.src = "img/Pufferfish.png";
+  }
+
   // Catch fish based on character
   if (character === "steve") {
     // STEVE: Cod 70%, Salmon 20%, Tropical 5%, Puffer 5%
     let randNum = Math.random();
     if (randNum < 0.7) {
-      numCod++;
-      numCodSpan.innerHTML = numCod;
-      resultImg.src = "img/Raw-Cod.png";
+      catchFishCod();
     } else if (randNum < 0.9) {
-      numSalmon++;
-      numSalmonSpan.innerHTML = numSalmon;
-      resultImg.src = "img/Raw-Salmon.png";
+      catchFishSalmon();
     } else if (randNum < 0.95) {
-      numTropical++;
-      numTropicalSpan.innerHTML = numTropical;
-      resultImg.src = "img/Tropical-Fish.png";
+     catchFishTropical();
     } else {
-      numPuffer++;
-      numPufferSpan.innerHTML = numPuffer;
-      resultImg.src = "img/Pufferfish.png";
+      catchFishPuffer();
     }
   } else if (character === "alex") {
     // ALEX: Cod 10%, Salmon 10%, Tropical 30%, Puffer 50%
     let randNum = Math.random();
     if (randNum < 0.1) {
-      numCod++;
-      numCodSpan.innerHTML = numCod;
-      resultImg.src = "img/Raw-Cod.png";
+      catchFishCod();
     } else if (randNum < 0.2) {
-      numSalmon++;
-      numSalmonSpan.innerHTML = numSalmon;
-      resultImg.src = "img/Raw-Salmon.png";
+      catchFishSalmon();
     } else if (randNum < 0.5) {
-      numTropical++;
-      numTropicalSpan.innerHTML = numTropical;
-      resultImg.src = "img/Tropical-Fish.png";
+      catchFishTropical();
     } else {
-      numPuffer++;
-      numPufferSpan.innerHTML = numPuffer;
-      resultImg.src = "img/Pufferfish.png";
+      catchFishPuffer();
     }
   } else if (character === "villager") {
     // Villager: Cod 25%, Salmon 25%, Tropical 25%, Puffer 25%
     let randNum = Math.random();
     if (randNum <= 0.25){
-      numCod++;
-      numCodSpan.innerHTML = numCod;
-      resultImg.src = "img/Raw-Cod.png";
+      catchFishCod();
     } else if (randNum <= 0.50) {
-      numSalmon++;
-      numSalmonSpan.innerHTML = numSalmon;
-      resultImg.src = "img/Raw-Salmon.png";
+      catchFishSalmon();
     } else if (randNum <= 0.75) {
-      numTropical++;
-      numTropicalSpan.innerHTML = numTropical;
-      resultImg.src = "img/Tropical-Fish.png";
+      catchFishTropical();
     } else {
-      numPuffer++;
-      numPufferSpan.innerHTML = numPuffer;
-      resultImg.src = "img/Pufferfish.png";
+      catchFishPuffer();
     }
   }
 }
